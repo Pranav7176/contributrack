@@ -1,0 +1,1 @@
+import jwt from 'jsonwebtoken'; export const token=id=>jwt.sign({id},process.env.JWT_SECRET,{expiresIn:'7d'}); export const ok=(res,data,message='Success',status=200)=>res.status(status).json({success:true,message,data}); export const hasProjectAccess=(project,user)=>String(project.owner)===String(user._id)||project.members.some(m=>String(m.user)===String(user._id));

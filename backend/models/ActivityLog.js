@@ -1,0 +1,1 @@
+import mongoose from 'mongoose'; const schema=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User'},project:{type:mongoose.Schema.Types.ObjectId,ref:'Project'},message:{type:String,required:true},type:{type:String,default:'activity'}},{timestamps:true}); export default mongoose.model('ActivityLog',schema);

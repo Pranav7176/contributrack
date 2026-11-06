@@ -1,0 +1,13 @@
+# Secrets
+backend/.env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Dependencies and generated output
+**/node_modules/
+frontend/dist/
+
+# Logs and local files
+*.log
+.DS_Store
